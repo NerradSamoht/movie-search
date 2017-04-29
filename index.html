@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Movie Search</title>
-
-  <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
   <link rel="stylesheet" href="css/styles.css">
-
 </head>
-
 <body>
-
   <!-- Start of first page: #one -->
   <div data-role="page" id="one">
-
     <div data-role="header">
       <form id="form" name="form" method="get">
         <fieldset>
@@ -26,47 +19,33 @@
         <div id="holder"></div>
       </form>
     </div>
-    <!-- /header -->
-
-
     <div role="main" class="ui-content">
       <div class="home">
         <div class="upcoming">
           <h1>Upcoming Movies:</h1>
         </div>
       </div>
-    </div><!-- /content -->
-
-  </div><!-- /page one -->
+    </div>
+  </div>
 
   <!-- Start of second page: #two -->
   <div data-role="page" id="two" data-theme="a">
     <div role="main" class="ui-content">
-
       <div class="bg"></div>
-
       <img id="main_img">
       <h1 id="title"></h1>
       <p id="tagline" class="lead"></p>
       <ul id="details"></ul>
       <p id="overview"></p>
-
       <div id="credits"></div>
-
     </div>
-    <!-- /content -->
+  </div>
+</div>
 
-  </div><!-- /content -->
-</div><!-- /page two -->
-
-
-
-  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/script.js"></script>
-
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
@@ -75,7 +54,7 @@
       $("#moviesearch").autocomplete({
         source: function(request, response) {
           $.ajax({
-            url: "http://www.darrenthomas.me.uk/movies/movie-list.php",
+            url: "https://darrenthomas.me.uk/movies/movie-list.php",
             dataType: "jsonp",
             data: {
               q: request.term
