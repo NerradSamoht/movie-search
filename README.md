@@ -1,1 +1,3 @@
-# movie-search
+# movie-app
+movie and actor search web app
+
